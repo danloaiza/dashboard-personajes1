@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Listado de heroes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let superHeroe of superHeroes">
+    <ion-img src="{{superHeroe.srcImagen}}"></ion-img>
+
+    <ion-item>
+      <ion-label>{{superHeroe.nombre}}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
