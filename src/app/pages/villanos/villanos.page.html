@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Listado de villanos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let villano of villanos">
+      <ion-card class="card-service">
+        <ion-item class="item-img">
+          <ion-img src="{{villano.srcImagen}}" class="img-service"></ion-img>
+        </ion-item>
+
+        <ion-card-header>
+          <ion-card-title>{{villano.nombre}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-label>Primera aparición: {{villano.primeraAparicion}}</ion-label><br>
+          <a (click)="detalleVillano(villano)">leer más ..</a>
+        </ion-card-content>
+
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

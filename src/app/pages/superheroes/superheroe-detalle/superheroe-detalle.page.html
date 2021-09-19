@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle {{superHeroe.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="superHeroe">
+    {{superHeroe.nombre}}
+
+    <ion-img src="{{superHeroe.srcImagen}}"></ion-img> <br>
+    <ion-label>Primera aparición: </ion-label>
+    <ion-label>{{superHeroe.primeraAparicion}}</ion-label><br>
+    <ion-label>Editorial: </ion-label>
+    <ion-label>{{superHeroe.editorial}}</ion-label><br>
+    <ion-label>Poderes: </ion-label>
+    <ion-label>{{superHeroe.poderes}}</ion-label> <br>
+
+  </div>
+
+  <label routerLink="/tabs/superheroes">regresar</label>
+
+
+</ion-content>

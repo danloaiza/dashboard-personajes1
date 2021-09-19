@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle {{villano.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="villano">
+    {{villano.nombre}}
+
+    <ion-img src="{{villano.srcImagen}}"></ion-img> <br>
+    <ion-label>Primera aparición: </ion-label>
+    <ion-label>{{villano.primeraAparicion}}</ion-label><br>
+    <ion-label>Editorial: </ion-label>
+    <ion-label>{{villano.editorial}}</ion-label><br>
+    <ion-label>Poderes: </ion-label>
+    <ion-label>{{villano.descripcion}}</ion-label> <br>
+
+    <label routerLink="/tabs/villanos">regresar</label>
+  </div>
+</ion-content>
